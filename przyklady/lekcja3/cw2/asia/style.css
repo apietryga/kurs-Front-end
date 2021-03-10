@@ -1,0 +1,109 @@
+body{
+
+    background-image: url("prism.png");
+}
+header{
+    background-image: url("kancelaria.jpg") ;
+    max-width: 1400px;
+    max-height: 250px;
+    justify-content: space-evenly;
+    display: flex;
+}
+.menu{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+   }   
+
+.p1{
+    max-width: 120px;
+    flex: 3;
+}
+.p2{
+    max-width: 120px;
+    flex: 3;
+}
+.p3{
+    max-width: 120px;
+    flex: 3;
+}
+.p4{
+    max-width: 120px;
+    flex: 3;
+}
+.p5{
+    max-width: 120px;
+    flex: 3;
+}
+ol li{
+    list-style-type: none;
+    
+}
+ol,ul{
+    padding: 0!important;;
+
+}
+ol{
+    cursor: pointer;
+}
+ol > li {
+    border:2px solid black;
+    position:relative;
+   
+}
+ol > li:hover > ul {
+    background-color:rgb(253, 194, 154);
+    display:block;
+}
+ol > li > ul  {
+    display:none;
+    position: absolute;
+}
+.container{
+    display: flex;
+}
+main{
+    background-color: burlywood;
+    border:2px solid black;
+    max-width: 50%;
+    align-items: center;
+    /* position: absolute; */
+}
+.jpgarticle{
+    max-width: 50%;
+    display: flex;
+
+}
+article{
+    max-width: 85%;
+    align-items: center;
+}
+.right{
+    border: 2px solid black;
+    max-width: 40%;
+    display: flex;
+    float: right;
+    justify-content: center;
+}
+aside{
+    background-color: rgb(116, 97, 97);
+    max-width: 80%;
+    justify-content: space-around;
+}
+.r1{
+    border:2px dotted blanchedalmond;
+    text-align: center;
+}
+.r2{
+    border:2px dotted blanchedalmond;
+    text-align: center;
+}
+.r3{
+    border:2px dotted blanchedalmond;
+    text-align: center;
+}
+.r4{
+    border:2px dotted blanchedalmond;
+    text-align: center;
+}

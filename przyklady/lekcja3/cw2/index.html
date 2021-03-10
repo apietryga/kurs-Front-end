@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            /* Background pattern from Toptal Subtle Patterns */
+            background-image:url(img/tactile_noise.png);
+            color:#fff;
+            margin:0;
+        }
+        
+        ol li{
+            list-style-type: none;
+        }
+        ol,ul{
+            padding: 0!important;;
+
+        }
+        ol{
+            display:flex;
+            cursor: pointer;
+            justify-content: space-evenly;
+            margin:0;
+        }
+
+        ol > li {
+            position:relative;
+            padding:2%;
+            
+        }
+        ol > li > ul{
+            position:absolute;
+            width:100%;
+            left:0;
+            top:100%;
+        }
+
+        ol > li:hover > ul > li{
+            background-color:rgba(255, 255, 255, 0.322);
+            display:flex;
+        }
+        ol > li > ul > li {
+            display:none;
+            padding:3%;
+        }
+
+        nav{
+            background-color:rgba(255, 255, 255, 0.322);
+        }
+
+        .container{
+            border:2px dashed red;
+            display:flex;
+            margin:1%;
+        }
+        main{
+            flex:3;
+        }
+        aside{
+            flex:1;
+        }
+        textarea{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ol>
+            <li>
+                Prawo karne
+                <ul>
+                    <li>artykuły</li>
+                    <li>doradztwo</li>
+                    <li>zadaj pytanie</li>
+                </ul>
+            </li>
+            <li>
+                Prawo cywilne
+                <ul>
+                    <li>artykuły</li>
+                    <li>doradztwo</li>
+                    <li>zadaj pytanie</li>
+                </ul>
+            </li>
+            <li>
+                Prawo gospodarcze 
+                <ul>
+                    <li>artykuły</li>
+                    <li>doradztwo</li>
+                    <li>zadaj pytanie</li>
+                </ul>
+            </li>
+            <li>
+                Prawo pracy
+                <ul>
+                    <li>artykuły</li>
+                    <li>doradztwo</li>
+                    <li>zadaj pytanie</li>
+                </ul>
+            </li>
+
+
+        </ol>
+    </nav>
+    <div class="container">
+        <main>
+            Atricle
+        </main>
+        <aside>
+            Polecane
+            <article>
+                <header>Nagłówek</header>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.
+            </article>
+        </aside>
+    </div>
+    <textarea placeholder="Wpisz komentarz"></textarea>
+
+    <style>
+        .zdjecie{
+            width:100%;
+            height:70vh;
+            background-image: url("Desert.jpg");
+            border:7px dashed rgb(27, 255, 46);
+            background-size: cover;
+            background-position: center;
+        }
+        textarea{
+            width:50%;
+        }
+    </style>
+    <div class="zdjecie"></div>
+
+    <textarea>xDD</textarea>
+
+
+    &circledS;
+    
+    
+</body>
+</html>

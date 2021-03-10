@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border:1px solid black;
+        }
+        .fixed{
+            border:2px dashed red;
+            position:fixed;
+            width:50%;
+            bottom:0;
+            right:0;
+        }
+        .static{
+            position:static;
+            height:70vh;
+        }
+        .sticky{
+            position:sticky;
+            top:0;
+        }
+        .relative{
+            border:2px dashed red;
+            height:20vh;
+            position:relative;
+        }
+        .absolute{
+            border:2px dashed blue;
+            position:absolute;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+        .absolute:nth-child(1){
+            border:5px dashed yellow;
+            z-index: 1;
+        }
+        .absolute:nth-child(2){
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        body{
+            background-color:red;
+        }
+
+        @media (max-width: 500px){
+            body{
+                background-color:green;
+            }
+        }
+
+        .relative{
+            border:2px dashed #000;
+            min-height:50vh;
+        }
+        .absolute{
+            width:20%;
+            bottom:0;
+        }
+        .absolute:nth-child(1){
+            left:10%;
+            height:70%;
+        } 
+        .absolute:nth-child(2){
+            left:40%;
+            height:20%;
+        } 
+        .absolute:nth-child(3){
+            left:70%;
+            height:70%;
+        }
+
+
+    a{
+        text-decoration: none;
+        color:yellow;
+    }
+    </style>
+
+
+    <a href="#menu2">Kliknij tu</a>
+    <div class="relative">
+        <div class="absolute">1</div>
+        <div class="absolute">2</div>
+        <div class="absolute">3</div>
+    </div>
+    <div class="fixed">FIXED</div>
+    <div class="static">STATIC</div>
+    <div class="sticky">STICKY</div>
+    <div id="menu2">MENU2</div>
+    <div class="static">STATIC</div>
+</body>
+</html>

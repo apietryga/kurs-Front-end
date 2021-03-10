@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cw1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .sprite{
+            width:90px;
+            height:90px;
+            border:2px dashed red;
+            background: url(https://raw.githubusercontent.com/apietryga/Font-end-sources/master/lekcja2/cw1/sprites.jpg);
+            background-repeat: no-repeat;         
+        }
+        .sprite:hover{
+            background-position: 0px -90px;
+        }
+        .sprite:active{
+            background-position: 0 -180px;
+        }
+        .logoHeader{
+            border:2px dashed red;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            width:70%;
+        }
+        .buttonPanel{
+            display:flex;
+            border:2px dashed green;
+            width:100%;
+            justify-content: space-between;
+        }
+        .button{
+            border:2px dashed red;
+            padding:2%;
+        }
+        .header{
+            border:2px dashed blue;            
+            display:flex;
+            justify-content: flex-end;
+            padding:5% 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logoHeader">
+            <div class="sprite"></div>
+            <div class="buttonPanel">
+                <div class="button">absolutne</div>
+                <div class="button">relatywne</div>
+                <div class="button">czcionki</div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .pionChart{
+            border:2px dashed red;
+            justify-content: space-around;
+            min-height:20vh;
+            display:none;
+        }
+        .pion{
+            height:50%;
+            border:2px dashed green;
+        }
+        .pion:before{
+            border:2px dashed  blue;
+            position:absolute;
+            margin-top:-25px;
+        }
+        .Bar1:before{content:"1"}
+        .Bar2:before{content:"2"}
+        .Bar3:before{content:"3"}
+
+    </style>
+    <div class="pionChart">
+        <div class="pion Bar1">1</div>
+        <div class="pion Bar2">2</div>
+        <div class="pion Bar3 to_jest_trzeciSl">3</div>
+    </div>
+
+
+
+
+    <style>
+        .chart{
+            border:2px dashed red;
+            margin:0 10%;
+        }
+        .bar{
+            border:2px dashed blue;
+            
+        }
+
+        .bar:before{
+            content:"10";
+            position:absolute;
+            margin-left:-25px;
+        }
+
+        .bar:nth-child(1):before{content:"10";}
+        .bar:nth-child(2):before{content:"20";}
+        .bar:nth-child(3):before{content:"30";}
+
+    
+
+    </style>
+
+    <div class="chart">
+        <div class="bar">10</div>
+        <div class="bar">20</div>
+        <div class="bar">30</div>
+    </div>
+
+
+
+</body>
+</html>

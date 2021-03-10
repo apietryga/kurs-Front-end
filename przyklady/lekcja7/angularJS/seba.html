@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS</title>
+    <style>
+    body p{
+        text-align: end;
+    }
+    .container{
+        display:flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .card{
+        width:33%;
+        margin:1%;
+    }
+    div div{
+        border:1px solid black;
+    }
+    </style>
+   <script src="cw3/angular.js"></script>
+</head>
+<!-- <body data-ng-app="myApp" data-ng-controller="myKontr"> -->
+<body 
+    data-ng-app="myApp"
+    data-ng-controller="myCtrl"
+>
+{{val}}
+	<div class="container">
+		<p>Szukaj:<input type="text" data-ng-model="search"></input></p>
+
+		<p>Nasi pracownicy</p>
+        		
+		<div class="card" ng-repeat="p in pracownicy |filter:search">
+			<div class="name">{{p.name}} +""+{{p.surname}}</div>
+			<div class="other">{{p.stanowisko}}<br></div>
+		</div>
+		
+		</div>
+	<!-- </div> -->
+
+    <script>
+        let app = angular.module("myApp",[])
+        app.controller("myCtrl",($scope)=>{
+            $scope.val = "ELOOOO";
+        })
+    </script>
+</body>
+</html>

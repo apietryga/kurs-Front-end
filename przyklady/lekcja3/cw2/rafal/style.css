@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-image: url(img/christmas-dark.png);
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+/* ol {
+    display: flex;
+}
+ol > li {
+    border: 2px dashed green;
+}
+ol > li:hover > ul >li {
+    background: red;
+} */
+.logo {
+    max-width: 500px;
+    height: 300px;
+    background-image: url(img/swistak.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.first__menu ol {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    padding: 5px;
+    width: 25%;
+}
+.first__menu ol > li {
+    position: relative;
+}
+ol > li > ol {
+    display: none;
+    position: absolute;
+}
+ol > li:hover > ol {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #000;
+}
+main {
+    margin: 0 5%;
+    display: flex;
+}
+main div {
+    flex: 2 1 auto;
+}
+.left__side {
+    width: 80%;
+    border: 1px solid black;
+    margin-right: 5%;
+}
+.article__photo {
+    width: 100%;
+    height: 40vh;
+    background-image: url(img/lis.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.right__side {
+    width: 20%;
+    border: 1px solid black;
+    text-align: center;
+}
+.second__menu ol {
+    list-style: none;
+    padding: 0;
+}
+.second__menu li {
+    border: 1px solid black;
+    margin: 5%;
+}
+.icon__profile {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/profil.jpg);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+.links__item {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+}

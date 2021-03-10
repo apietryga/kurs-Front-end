@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="angular.min.js"></script>
+		<style>
+			:root{font-size:50px;}
+			h3{margin-top:80%;font-size:1rem;}
+			h3:first-child{margin-top:0;}
+			body{font-size:0.6rem;}
+		</style>
+	</head>
+<body data-ng-app="myApp" data-ng-init = "przycisk = true">
+<!-------------------------------------------->
+<h3>PRZYKŁAD 5</h3>
+<!-------------------------------------------->
+		<input type="checkbox" data-ng-model="przycisk"/>		
+		{{przycisk}}
+		<br />
+		<button data-ng-disabled="przycisk">Kliknij mnie!</button>
+		<br />
+		<div data-ng-show="przycisk">To show</div>
+		<div data-ng-hide="przycisk">To hide</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------------->
+<h3>PRZYKŁAD 6</h3>
+<!-------------------------------------------->
+    <div ng-controller="kontroler">        
+        <h1 ng-mousemove="myFunc($event)">Mouse Over Me!</h1>
+        <p>Coordinates: {{x + ', ' + y}}</p>
+    </div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('kontroler', function($scope) {
+    $scope.myFunc = function(myE) {
+        $scope.x = myE.clientX;
+        $scope.y = myE.clientY;
+    }
+});
+</script>
+
+
+<!--
+	Listę dyrektyw angularjs możesz znaleźć
+	tutaj: 
+	https://www.w3schools.com/angular/angular_ref_directives.asp
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<h3>I na zot do ćwiczeń</h3>
+	</body>
+</html>

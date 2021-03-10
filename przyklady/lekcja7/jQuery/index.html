@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{border:1px dashed #000}
+        nav{
+            display:flex;
+        }
+        nav div{
+            height:25vh;
+            flex:1;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav div img{
+            max-width:100%;
+            max-height: 100%;
+        }
+        main{
+            display:flex;
+
+        }
+        main div{
+            flex:1;
+            text-align:center;
+            min-height:25vh;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+        main div img{
+            max-height: 100%;
+            max-width: 100%;
+        }
+        header, footer{
+            padding:2%;
+            text-align:center;
+        }
+        footer{
+            text-align:right;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        Przygody Pana Cyfrowego
+    </header>
+    <nav>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </nav>
+    <main>
+        <div>
+            GIF
+        </div>
+        <div>
+            OPIS
+        </div>
+    </main>
+    <footer>
+        Strona stworzona przez Antka.
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script>
+    let data = [
+        {
+            "src": "img/gada.gif",
+            "desc" : " pan cyfrowy se gada"
+        },
+        {
+            "src": "img/majta%20nog%C4%85.gif",
+            "desc" : " pan cyfrowy se majta"
+        },
+        {
+            "src": "img/siada.gif",
+            "desc" : " pan cyfrowy se siada"
+        },
+        {
+            "src": "img/wstaje.gif",
+            "desc" : " pan cyfrowy se wstaje"
+        }
+    ];
+        
+    for(let i = 0; i < data.length; i++){
+        let img = createImg(i);
+        let dom = $("nav").children();
+        $(dom[i])
+            .append(img)
+            .click(()=>{
+                let newImg = createImg(i);
+                let output = $(".content").children();
+                console.log(output);
+                $(output[0]).html(newImg);
+                $(output[1]).html(data[i].desc);
+                
+            })
+    }
+
+    function createImg(i){
+        let img = document.createElement("img");
+        $(img).attr({
+            "src":data[i].src,
+            "alt":data[i].desc
+        })
+        return img;
+    }
+
+
+    </script>
+
+
+</body>
+</html>

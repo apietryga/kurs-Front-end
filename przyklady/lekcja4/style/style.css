@@ -1,0 +1,131 @@
+body .secMain, body .secMain article, body .secMain div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .secMain article {
+  border: 2px dashed red;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+body .secMain div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 2px dashed red;
+  padding: 2%;
+}
+
+body .reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body .grid {
+  border: 2px dashed violet;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "p1 p2 p3" "p6 p4 p5";
+}
+
+body .grid div {
+  height: 25vh;
+  border: 20px solid #000;
+  background-size: cover;
+  background-position: center;
+}
+
+body .grid div:nth-child(1) {
+  background-image: url(../img/d1.jpg);
+  border-color: #262626;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: p1;
+}
+
+body .grid div:nth-child(2) {
+  background-image: url(../img/d2.jpg);
+  border-color: #4d4d4d;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: p2;
+}
+
+body .grid div:nth-child(3) {
+  background-image: url(../img/d3.jpg);
+  border-color: #737373;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: p3;
+}
+
+body .grid div:nth-child(4) {
+  background-image: url(../img/d4.jpg);
+  border-color: #999999;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: p4;
+}
+
+body .grid div:nth-child(5) {
+  background-image: url(../img/d5.jpg);
+  border-color: #bfbfbf;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: p5;
+}
+
+body .grid div:nth-child(6) {
+  background-image: url(../img/d6.jpg);
+  border-color: #e6e6e6;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: p6;
+}
+
+.flex-item1 {
+  font-size: 5px;
+  background-color: #404040;
+  color: #bfbfbf;
+}
+
+.flex-item2 {
+  font-size: 10px;
+  background-color: gray;
+  color: gray;
+}
+
+.flex-item3 {
+  font-size: 15px;
+  background-color: #bfbfbf;
+  color: #404040;
+}
+
+.flex-item4 {
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+.klasa {
+  border: 2px dashed blue;
+}
+
+.klasa:nth-child(1) {
+  border: 2px dashed red;
+}

@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(215, 230, 88)!important;
+    margin:0;
+}
+
+.flex{
+    display:flex;
+    border:2px solid rgb(46, 34, 112);
+    color:#fff;
+}
+.flex div{
+   background-color: blueviolet; 
+}
+
+.left{
+    flex:3;
+}
+.right{
+    flex:1;
+}
+
+.flex .left img{
+    max-width: 100%;
+}
+
+.header{
+    display:flex;
+    justify-content: center;
+}
+
+.div1{
+    background-color:rgb(44, 222, 228);
+    margin:10px;
+    padding: 5px 50px;
+    
+}
+
+.footer{
+    padding: 15px;
+}

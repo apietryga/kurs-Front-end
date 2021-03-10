@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+        }
+        header{
+            border:2px dashed red;
+            
+        }
+        section{
+            border:2px dashed blue;
+        }
+        nav{
+            border:2px dashed green;
+            display:flex;
+        }
+        .scrolly{
+            height:150vh;
+        }
+        .top{
+            position:sticky;
+            top:0;
+        }
+        .left{
+            position:fixed;
+            left:0;
+            top:0;
+            height:100%;
+        }
+        .button{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <header id="topHeader" class="top">
+        <section>
+            <div class="leftX">O</div>
+            <div class="rightX">=</div>
+        </section>
+        <section>
+            <p class="button">MENU</p>
+            <nav>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </nav>
+        </section>
+    </header>
+
+    <div class="scrolly"></div>
+
+    <script src="jquery.js"></script>
+    <script>
+        let tH = document.querySelector("#topHeader");
+        let tHWidth = tH.offsetHeight;
+        window.onscroll = () => {
+                
+
+            // jeśli przejedziesz pod header, wrzuć go na lewo
+            if(window.scrollY > tHWidth && window.innerWidth > 300){
+                tH.className = "left";
+                document.querySelector(".rightX").style.display = "none";
+                // document.querySelector(".leftX").style.display = "none";
+                document.querySelector(".button").style.display = "flex";
+                
+            }else{
+                // document.querySelector(".leftX").style.position = "flex";
+                document.querySelector(".button").style.display = "none";
+                
+                document.querySelector(".rightX").style.display = "flex";
+                tH.className = "top";
+            }
+        }
+    </script>
+</body>
+</html>
